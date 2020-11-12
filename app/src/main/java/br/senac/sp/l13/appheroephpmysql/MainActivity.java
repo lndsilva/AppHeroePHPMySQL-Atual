@@ -50,16 +50,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextHeroId = (EditText) findViewById(R.id.editTextHeroId);
-        editTextName = (EditText) findViewById(R.id.editTextName);
-        editTextRealname = (EditText) findViewById(R.id.editTextRealname);
-        ratingBar = (RatingBar) findViewById(R.id.ratingBar);
-        spinnerTeam = (Spinner) findViewById(R.id.spinnerTeamAffiliation);
+        editTextHeroId = findViewById(R.id.editTextHeroId);
+        editTextName = findViewById(R.id.editTextName);
+        editTextRealname = findViewById(R.id.editTextRealname);
+        ratingBar = findViewById(R.id.ratingBar);
+        spinnerTeam = findViewById(R.id.spinnerTeamAffiliation);
 
-        buttonAddUpdate = (Button) findViewById(R.id.buttonAddUpdate);
+        buttonAddUpdate = findViewById(R.id.buttonAddUpdate);
 
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        listView = (ListView) findViewById(R.id.listViewHeroes);
+        progressBar = findViewById(R.id.progressBar);
+
+        listView = findViewById(R.id.listViewHeroes);
 
         heroList = new ArrayList<>();
 
@@ -99,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        //Conexão entre o Android e o PHP através do Hash.
         HashMap<String, String> params = new HashMap<>();
         params.put("name", name);
         params.put("realname", realname);
